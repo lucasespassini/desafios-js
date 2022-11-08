@@ -1,7 +1,13 @@
-const oldArray = ['It´s', 'not', true, 0]
+const oldArray = ['Oh', 'Hi', 'Mark']
+let newArray = '[ '
+let i = -1
 function reverse(array) {
-  for (let i = 0; i < array.length; i++) {
-    console.log(array[i])
+  if (i < -oldArray.length) {
+    return newArray + ' ]'
   }
+  newArray += array.at(i) + ', '
+  i--
+  return reverse(array)
 }
+
 console.log(reverse(oldArray))
